@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import '/src/styles/variables.scss';
+
+.howToConnectSection {
+  padding: 20px 0;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 150px;
+  margin-right: auto;
+  font-family: 'Inter';
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @each $breakpoint, $container-width in $container-widths {
+    @if $breakpoint == 'large-desktop' {
+      @media screen and (min-width: $bp-large-desktop) {
+        max-width: $container-width;
+        padding-left: map-get($gutters, $breakpoint);
+        padding-right: map-get($gutters, $breakpoint);
+      }
+    }
+    @else if $breakpoint == 'desktop' {
+      @media screen and (min-width: $bp-desktop) and (max-width: $bp-large-desktop - 1px) {
+        max-width: $container-width;
+        padding-left: map-get($gutters, $breakpoint);
+        padding-right: map-get($gutters, $breakpoint);
+      }
+    }
+    @else if $breakpoint == 'tablet' {
+      @media screen and (min-width: $bp-tablet) and (max-width: $bp-desktop - 1px) {
+        margin-top: 100px;
+        max-width: $container-width;
+        padding-left: map-get($gutters, $breakpoint);
+        padding-right: map-get($gutters, $breakpoint);
+      }
+    }
+    @else if $breakpoint == 'mobile' {
+      @media screen and (max-width: $bp-tablet - 1px) {
+        margin-top: 100px;
+        max-width: $container-width;
+        padding-left: map-get($gutters, $breakpoint);
+        padding-right: map-get($gutters, $breakpoint);
+      }
+    }
+  }
+
+
+  .topSection {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-weight: 500;
+    color: #181A2A;
+    margin-bottom: 10px;
+    line-height: 1;
+
+
+    @media(max-width: $bp-tablet - 1px) {
+      font-size: 32px;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+      font-size: 48px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      font-size: 64px;
+    }
+  }
+
+  .subtitle {
+    color: #000000;
+    margin-bottom: 30px;
+    line-height: 1;
+    @media(max-width: $bp-tablet - 1px) {
+      font-size: 14px;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+      font-size: 15px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      font-size: 16px;
+    }
+
+
+  }
+  .line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #5070de;
+    z-index: 1;
+    top: 220px;
+    @media(max-width: $bp-tablet - 1px) {
+      top: 200px;
+    }
+    @media(min-width: $bp-tablet)  {
+      top: 250px;
+    }
+    @media(min-width: $bp-desktop) and (max-width: $bp-large-desktop - 1px) {
+      top: 260px;
+    }
+    @media(min-width: $bp-large-desktop) {
+      top: 290px;
+    }
+  }
+
+  .stepsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 300px;
+    position: relative;
+    z-index: 2;
+
+
+    @media(max-width: $bp-tablet - 1px) {
+      flex-direction: column;
+      gap: 10px;
+
+    } @media(min-width: $bp-tablet ) {
+
+    gap: 10px;
+
+  }
+    @media(min-width: $bp-desktop ) {
+
+      gap: 10px;
+
+    }
+    @media(min-width: $bp-large-desktop ) {
+
+      gap: 300px;
+
+    }
+
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    @media (max-width: $bp-tablet - 1px) {
+      width: 100%;
+      text-align: center;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+      width: 40%;
+    }
+    @media (min-width: $bp-large-desktop) {
+      width: auto;
+      min-width: 200px;
+      max-width: 240px;
+    }
+
+
+    .stepNumber {
+      font-weight: 500;
+      color: #6674E2;
+      margin-bottom: 0px;
+      position: relative;
+      z-index: 2;
+      line-height: 1;
+      text-align: left;
+      @media(max-width: $bp-tablet - 1px) {
+        font-size: 32px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+        font-size: 36px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 40px;
+      }
+
+    }
+
+
+    .stepTitle {
+      font-weight: 500;
+      color: #181A2A;
+      margin-bottom: 5px;
+      z-index: 2;
+      line-height: 1;
+      padding: 20px 0px;
+      text-align: left;
+
+
+
+      @media(max-width: $bp-tablet - 1px) {
+        font-size: 16px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+        font-size: 18px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 20px;
+      }
+    }
+
+    .stepDescription {
+      text-align: left;
+      color: #747786;
+      z-index: 2;
+      line-height: 1;
+      @media(max-width: $bp-tablet - 1px) {
+        font-size: 12px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+        font-size: 13px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .contactText {
+    margin-top: 200px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 0;
+    flex-shrink: 0;
+
+    @media(max-width: $bp-tablet - 1px) {
+      font-size: 14px;
+      text-align: center;
+      display: none;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+      font-size: 15px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      font-size: 16px;
+    }
+
+  }
+
+  .link {
+    color: #6674E2;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

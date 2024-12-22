@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import '/src/styles/variables.scss';
+
+.faqContainer {
+  font-family: 'Inter', sans-serif;
+  margin-left: 40px;
+  margin-right: auto;
+  padding: 20px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  max-width: 1700px;
+  @each $breakpoint, $container-width in $container-widths {
+    @if $breakpoint == 'large-desktop' {
+      @media screen and (min-width: $bp-large-desktop) {
+        width: 88.5%;
+      }
+    }
+    @else if $breakpoint == 'desktop' {
+      @media screen and (min-width: $bp-desktop) and (max-width: $bp-large-desktop - 1px) {
+        margin-top: 100px;
+        width: 94.5%;
+      }
+    }
+    @else if $breakpoint == 'tablet' {
+      @media screen and (min-width: $bp-tablet) and (max-width: $bp-desktop - 1px) {
+
+        margin-top: 90px;
+        width: 96%;
+      }
+    }
+    @else if $breakpoint == 'mobile' {
+      @media screen and (max-width: $bp-tablet - 1px) {
+        margin-left: 1px;
+        margin-top: 90px;
+        width: 100%;
+      }
+    }
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    h1 {
+      font-weight: 500;
+      margin: 0;
+      color: #181A2A;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 32px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+        font-size: 48px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 64px;
+      }
+
+    }
+  }
+  .navigationButtons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 10px;
+  }
+  .cardsContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
+    }
+  }
+  .card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../img/border.svg');
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    @media (max-width: $bp-tablet - 1px) {
+      max-width: 409px;
+      height: 400px;
+      padding: 20px 15px;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+      max-width: 409px;
+      height: 400px;
+      padding: 25px 20px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      max-width: 409px;
+      height: 400px;
+      padding: 30px 20px;
+    }
+
+    .cardContent {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      padding: 20px 0px;
+    }
+
+    .cardTitle {
+      font-weight: 700;
+      color: #181A2A;
+      white-space: pre-line;
+      margin-bottom: 10px;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 18px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+        font-size: 20px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 24px;
+      }
+    }
+
+    .cardDescription {
+      color: #585A6A;
+      font-weight: 400;
+      line-height: 20px;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 14px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+        font-size: 15px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 16px;
+      }
+    }
+    .cardButton {
+      border: none;
+      background-color: rgba(102, 116, 226, 0.30);
+      border-radius: 5px;
+      color: #6674E2;
+      font-weight: 700;
+      align-self: flex-start;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+        font-size: 15px;
+        padding: 9px 18px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .navigationButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+    .navButton {
+      background-color: #E5E8F1;
+      border: none;
+      border-radius: 50%;
+      font-weight: 700;
+      color: #181A2A;
+      @media (max-width: $bp-tablet - 1px) {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+      }
+    }
+  }
+
+}

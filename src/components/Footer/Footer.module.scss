@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import '/src/styles/variables.scss';
+
+
+.footer {
+  padding: 120px 0;
+  position: relative;
+
+
+
+  .footerContainer {
+    font-family: 'Inter', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+   
+    padding-left: map-get($gutters, 'large-desktop');
+    padding-right: map-get($gutters, 'large-desktop');
+    @media (max-width: $bp-tablet - 1px) {
+      max-width: 100%;
+      padding-left: map-get($gutters, 'mobile');
+      padding-right: map-get($gutters, 'mobile');
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+      padding-left: map-get($gutters, 'tablet');
+      padding-right: map-get($gutters, 'tablet');
+    }
+  }
+  .leftSide
+  {
+    flex: 1;
+    text-align: left;
+    @media (max-width: $bp-tablet - 1px) {
+      text-align: center;
+    }
+    .allTariffs
+    {
+      max-width: 200px;
+      font-weight: 700;
+      color: white;
+      background-color: #5171E0;
+      padding: 30px;
+      border-radius: 0 10px 10px 0;
+      position: relative;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 24px;
+        padding: 20px;
+        border-radius: 10px ;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 28px;
+        padding: 25px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 32px;
+        padding: 30px;
+      }
+
+
+    }
+    .footerLine {
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+
+    }
+  }
+  .centerSide {
+    flex: 1;
+    text-align: center;
+
+    .phoneNumber {
+      font-weight: 700;
+      color: white;
+      white-space: nowrap;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 18px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 22px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 24px;
+      }
+      .connectionQuestion {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+        white-space: normal;
+        @media (max-width: $bp-tablet - 1px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+
+    .links
+    {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+      gap: 10px;
+    }
+    .link
+    {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: underline;
+      white-space: nowrap;
+      transition: opacity 0.2s ease;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        opacity: 0.8;
+      }
+      .icon {
+        display: inline-block;
+        margin-left: 5px;
+      }
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 12px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 14px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 16px;
+      }
+
+    }
+  }
+  .rightSide {
+    flex: 1;
+    text-align: right;
+
+    @media (max-width: $bp-tablet - 1px) {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .submitButton {
+      background-color: #5171E0;
+      color: white;
+      border: none;
+      padding: 20px 20px;
+      cursor: pointer;
+      font-weight: 700;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      white-space: nowrap;
+      border-radius: 5px;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 14px;
+        white-space: normal;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 16px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 18px;
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+
+      .arrow {
+        display: inline-block;
+        line-height: 0;
+      }
+    }
+    .info {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 12px;
+      text-align: right;
+      margin-top: 10px;
+      @media (max-width: $bp-tablet - 1px) {
+        text-align: center;
+      }
+    }
+  }
+
+
+  .bottomSide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    @media (max-width: $bp-tablet - 1px) {
+      font-size: 10px;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+      font-size: 11px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      font-size: 12px;
+    }
+
+  }
+
+
+  .copyRightLink{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+    &:hover {
+      opacity: 0.8;
+    }
+
+  }
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .socialLink {
+      color: rgba(255, 255, 255, 0.8);
+      transition: opacity 0.2s ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .makeLink {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    .makeLinkText
+    {
+      white-space: nowrap;
+    }
+  }
+
+}

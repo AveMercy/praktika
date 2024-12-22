@@ -1,0 +1,44 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  background: #cdd1d9;
+  overflow-x: hidden;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  &.no-scroll{
+    overflow: hidden;
+  }
+}
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 0;
+  @media (max-width: $bp-tablet - 1px) {
+    padding-left: 20px;
+  }
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+    padding-left: 20px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+}

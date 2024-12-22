@@ -1,0 +1,754 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import '/src/styles/variables.scss';
+
+.providerListContainer {
+
+  font-family: 'Inter', sans-serif;
+  margin-left: 20px;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  max-width: 1710px;
+
+
+  padding-left: map-get($gutters, 'large-desktop');
+  padding-right: map-get($gutters, 'large-desktop');
+
+  @media (max-width: $bp-tablet - 1px) {
+    max-width: 100%;
+
+    margin-top:-30px;
+    margin-left: 5px;
+    padding-left: map-get($gutters, 'mobile');
+    padding-right: map-get($gutters, 'mobile');
+
+  }
+
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+
+    padding-left: map-get($gutters, 'tablet');
+    padding-right: map-get($gutters, 'tablet');
+
+  }
+  @media (min-width: $bp-mobile) {
+    width: 95%;
+
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 98%;
+    margin-top:100px;
+
+
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 94%;
+    left: 0;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 88.5%;
+
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+
+    .headerTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      h1 {
+        margin: 0;
+        font-weight: 500;
+        color: #181A2A;
+
+        @media (max-width: $bp-tablet - 1px) {
+          font-size: 32px;
+        }
+        @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+          font-size: 48px;
+        }
+        @media (min-width: $bp-large-desktop) {
+          font-size: 64px;
+        }
+      }
+    }
+
+    .headerBottom {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .location {
+        font-weight: 400;
+        color: #585A6A;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .dropdownIcon{
+          display: inline-block;
+          margin-left: 5px;
+          align-items: center;
+          position: relative;
+          width: 15px;
+          height: 15px;
+          background: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.18234L5 5.18234L9 1.18234' stroke='%235d6be6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+
+  .navigationButtons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 10px;
+  }
+
+  .providerCards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .allTariffsCard {
+    flex: 0 0 auto;
+    position: relative;
+    @media (max-width: $bp-tablet - 1px) {
+      width: 280px;
+      height: 400px;
+      top: 14px;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+      width: 350px;
+      height: 500px;
+      top: 15px;
+
+    }
+    @media (min-width: $bp-large-desktop) {
+      width: 410px;
+      height: 599px;
+
+    }
+    margin-top: 0;
+
+
+    &.firstCard {
+      @media (max-width: $bp-tablet - 1px) {
+        height: 410px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        height: 510px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        height: 600px;
+      }
+      .allTariffsCardContent{
+        height: 100%;
+      }
+    }
+    .allTariffsCardContent {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+      @media (max-width: $bp-tablet - 1px) {
+        padding: 20px 10px;
+
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+
+      }
+      @media (min-width: $bp-large-desktop) {
+
+      }
+
+
+
+
+    }
+
+    .cardBackground {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      z-index: -1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: transparent;
+      @media (max-width: $bp-tablet - 1px) {
+        width: 280px;
+        height: 400px;
+
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        width: 350px;
+        height: 500px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        width: 410px;
+        height: 599px;
+      }
+
+    }
+
+    .bgSvg {
+      width: 100%;
+      @media (max-width: $bp-tablet - 1px) {
+        display: none;
+
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        display: none;
+      }
+
+    }
+
+    .blueOverlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: -2;
+      @media (max-width: $bp-tablet - 1px) {
+        width: 280px;
+        height: 400px;
+
+
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        width: 350px;
+        height: 500px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        width: 410px;
+        height: 599px;
+      }
+
+      .blueSvg {
+        width: 100%;
+        height: auto;
+        display: block;
+
+
+      }
+    }
+
+    .effectsSvg {
+      position: absolute;
+      top: -30px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: -1;
+    }
+
+    .cardHeader {
+      font-weight: 500;
+      color: white;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 24px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 28px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 32px;
+      }
+    }
+
+    .cardText {
+      font-weight: 400;
+      color: white;
+      margin: 30px 0px;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 14px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 16px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 16px;
+        margin: 50px 0px;
+      }
+
+    }
+
+    .cardTextCenter {
+      font-weight: 500;
+      color: white;
+      line-height: 40px;
+      text-align: center;
+      margin-bottom: auto;
+      margin-top: 60px;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 24px;
+        line-height: 32px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 32px;
+        line-height: 40px;
+        margin-top: 140px;
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+    }
+
+    .mainButton {
+      background-color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 15px;
+      color: #5A96F9;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .contact {
+      font-weight: 400;
+      margin-bottom: 50px;
+      color: white;
+      display: flex;
+      align-items: center;
+      @media (max-width: $bp-tablet - 1px) {
+        gap: 40px;
+        font-size: 12px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        gap: 80px;
+        font-size: 13px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        gap: 130px;
+        font-size: 14px;
+      }
+      .socialIcons {
+        display: flex;
+        gap: 35px;
+
+        svg {
+          width: 25px;
+          height: 25px;
+          path {
+            fill: white;
+          }
+
+        }
+
+      }
+    }
+
+    .askQuestionContainer {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .askQuestionButton {
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -4%;
+      font-weight: 500;
+    }
+  }
+
+  .providerCardContainer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: -2px;
+    @media (max-width: $bp-tablet - 1px) {
+      min-width: 280px;
+      max-width: 280px;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+      min-width: 350px;
+      max-width: 350px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      min-width: 400px;
+      max-width: 400px;
+    }
+  }
+
+  .providerCard {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../img/providerslogo/border.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-right: 2px solid #E5E8F1;
+    box-sizing: border-box;
+    @media (max-width: $bp-tablet - 1px) {
+      width: 279px;
+      height: 380px;
+      padding: 20px 15px;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+      width: 349px;
+      height: 470px;
+      padding: 25px 15px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      width: 409px;
+      height: 519px;
+      padding: 30px 20px;
+    }
+    .cardRibbon {
+      display: none;
+    }
+
+    .cardContent {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .providerCardDivider {
+      height: 1px;
+      background-color: #E5E8F1;
+      margin: 15px -20px;
+      width: 100%;
+    }
+
+    .providerName {
+      font-weight: 700;
+      color: #181A2A;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 16px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 18px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 20px;
+      }
+    }
+
+    .placeholderLogo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      @media (max-width: $bp-tablet - 1px) {
+        width: 30px;
+        height: 30px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        width: 40px;
+        height: 40px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        width: 50px;
+        height: 50px;
+      }
+      img {
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .ratingValue {
+        font-weight: 700;
+        color: #181A2A;
+        @media (max-width: $bp-tablet - 1px) {
+          font-size: 14px;
+        }
+        @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+          font-size: 15px;
+        }
+        @media (min-width: $bp-large-desktop) {
+          font-size: 16px;
+        }
+      }
+
+      .ratingBar {
+        height: 5px;
+        border-radius: 5px;
+        background-color: #E5E8F1;
+        @media (max-width: $bp-tablet - 1px) {
+          width: 40px;
+        }
+        @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+          width: 45px;
+        }
+        @media (min-width: $bp-large-desktop) {
+          width: 50px;
+        }
+        .ratingBarFill {
+          height: 5px;
+          border-radius: 5px;
+          background-color: #5A96F9;
+        }
+      }
+
+      .reviewCount {
+        font-weight: 400;
+        color: #585A6A;
+        @media (max-width: $bp-tablet - 1px) {
+          font-size: 12px;
+        }
+        @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+          font-size: 13px;
+        }
+        @media (min-width: $bp-large-desktop) {
+          font-size: 14px;
+        }
+      }
+    }
+    .services {
+      color: #585A6A;
+      font-weight: 400;
+      margin-bottom: 10px;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 12px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 13px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 14px;
+      }
+    }
+    .price {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .priceText {
+        font-weight: 400;
+        color: #585A6A;
+        @media (max-width: $bp-tablet - 1px) {
+          font-size: 12px;
+        }
+        @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+          font-size: 13px;
+        }
+        @media (min-width: $bp-large-desktop) {
+          font-size: 14px;
+        }
+      }
+
+      .priceValueContainer {
+        display: flex;
+        align-items: center;
+
+        .priceValue {
+          font-weight: 700;
+          color: #181A2A;
+          @media (max-width: $bp-tablet - 1px) {
+            font-size: 18px;
+          }
+          @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+            font-size: 20px;
+          }
+          @media (min-width: $bp-large-desktop) {
+            font-size: 24px;
+          }
+        }
+
+        .priceCurrency {
+          font-weight: 400;
+          color: #585A6A;
+          margin-left: 5px;
+          @media (max-width: $bp-tablet - 1px) {
+            font-size: 13px;
+          }
+          @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+            font-size: 14px;
+          }
+          @media (min-width: $bp-large-desktop) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .speed {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .speedText {
+        font-weight: 400;
+        color: #585A6A;
+        @media (max-width: $bp-tablet - 1px) {
+          font-size: 12px;
+        }
+        @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+          font-size: 13px;
+        }
+        @media (min-width: $bp-large-desktop) {
+          font-size: 14px;
+        }
+      }
+      .speedValue {
+        font-weight: 700;
+        color: #181A2A;
+        @media (max-width: $bp-tablet - 1px) {
+          font-size: 16px;
+        }
+        @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+          font-size: 18px;
+        }
+        @media (min-width: $bp-large-desktop) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .cardDivider {
+    height: 1px;
+    background-color: #E5E8F1;
+    margin: 15px -20px;
+    width: 100%;
+  }
+  .firstCardDivider {
+    height: 1px;
+    background-color: #E5E8F1;
+    margin: -60px -20px;
+    @media (max-width: $bp-tablet - 1px) {
+      margin: -30px -15px;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+      margin: -40px -15px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      margin: -60px -20px;
+    }
+    width: 100%;
+  }
+  .navigationButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+    .navButton {
+      background-color: #E5E8F1;
+      border: none;
+      border-radius: 50%;
+      font-weight: 700;
+      color: #181A2A;
+      @media (max-width: $bp-tablet - 1px) {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+      }
+    }
+  }
+}
+.cityDropdown {
+  position: relative;
+  display: inline-block;
+  .cityDropdownHeader {
+    font-weight: 500;
+    color: #5d6be6;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @media (max-width: $bp-tablet - 1px) {
+      font-size: 24px;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+      font-size: 32px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      font-size: 64px;
+    }
+  }
+  .cityDropdownList{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #E5E8F1;
+    z-index: 10;
+    border-radius: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    .cityDropdownItem{
+      font-weight: 400;
+      color: #585A6A;
+      cursor: pointer;
+      padding: 10px 15px;
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 16px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 18px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 20px;
+      }
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+    }
+  }
+}

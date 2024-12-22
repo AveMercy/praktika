@@ -1,0 +1,36 @@
+$primary-color: #007BFF;
+$secondary-color: #ffffff;
+$bg-color: #F5F5F5;
+$text-color: #000000;
+
+$font-family: 'Roboto', sans-serif;
+$font-size-default: 1rem; // 16px
+$font-size-large: 1.5rem; // 24px
+$font-size-small: 0.875rem; // 14px
+
+
+$bp-large-desktop: 1520px;
+$bp-desktop: 1092px;
+$bp-tablet: 768px;
+$bp-mobile: 320px;
+
+
+$container-widths: (
+        'large-desktop': 1376px,
+        'desktop': 984px,
+        'tablet': 684px,
+        'mobile': 304px,
+);
+$gutters: (
+        'large-desktop': 32px,
+        'desktop': 24px,
+        'tablet': 24px,
+        'mobile': 16px
+);
+
+$paddings: (
+        'large-desktop': 20px,
+        'desktop': 20px,
+        'tablet': 20px,
+        'mobile': 20px,
+);

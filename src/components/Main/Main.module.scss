@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import '/src/styles/variables.scss';
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  width: 100%;
+
+  padding-left: 0;
+  padding-right: 0;
+  @media (min-width: $bp-mobile) {
+
+
+  }
+
+  @media (min-width: $bp-tablet) {
+
+  }
+
+  @media (min-width: $bp-desktop) {
+    left: 1%;
+
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    left: 1%;
+    max-width: 1920px;
+
+  }
+}
+
+.mainscreen {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0px 0px;
+  mix-blend-mode: normal;
+
+}
+
+.firstscreen {
+  z-index: -4;
+  position: relative;
+
+}
+
+.rectangle1 {
+  z-index: -4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1682px;
+  height: 2609px;
+  background-color: white;
+  border: 1px solid #5171E0;
+  @media (min-width: $bp-mobile) {
+    width: 95%;
+    left: 2%;
+    height: 2209px;
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 96%;
+    left: 2%;
+    height: 2250px;
+
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 93%;
+    left: 0;
+    height: 2200px;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 87%;
+    height: 2609px;
+  }
+}
+
+.rectangle2 {
+  z-index: -7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1698px;
+  height: 3920px;
+  background-color: white;
+  border: 1px solid #5171E0;
+  @media (min-width: $bp-mobile) {
+    width: 95%;
+    left: 2%;
+    height: 3500px;
+
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 96%;
+    left: 2%;
+    height: 3420px;
+
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 94%;
+    left: 0;
+    height: 3420px;
+
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 88%;
+    height: 3920px;
+
+  }
+}
+
+.rectangle3 {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1714px;
+  height: 4720px;
+  background-color: white;
+  border: 1px solid #5171E0;
+  @media (min-width: $bp-mobile) {
+    width: 95%;
+    left: 2%;
+    height: 4200px;
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 96%;
+    left: 2%;
+    height: 4220px;
+
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 95%;
+    left: 0;
+    height: 4720px;
+
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 89%;
+    left: 0;
+    height: 4720px;
+
+  }
+}
+
+.secondscreen {
+  z-index: -6;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  mix-blend-mode: normal;
+}
+
+.thirdscreen {
+  z-index: -7;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.bg {
+  z-index: -1;
+  position: relative;
+
+}
+
+.bg1 {
+
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 1666px;
+  height: 929px;
+  background: url("../../img/bg.png");
+  border: 1px solid #5171E0;
+
+  @media (min-width: $bp-mobile) {
+    width: 95%;
+    left: 2%;
+    height: 700px;
+
+  }
+  @media (max-width: $bp-mobile) {
+    width: 96%;
+    left: 2%;
+    height: 700px;
+
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 96%;
+    left: 2%;
+    height: 800px;
+
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 92%;
+    left: 0;
+    height: 800px;
+
+
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 86%;
+    height: 929px;
+  }
+}
+
+
+.application {
+  position: relative;
+  top: 2350px;
+  @media (min-width: $bp-mobile) {
+    top: 1950px;
+  }
+
+  @media (min-width: $bp-tablet) {
+    top: 1900px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    top: 1900px;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    top: 2350px;
+
+  }
+}
+
+.rectangleleft {
+  position: absolute;
+  width: 880px;
+  height: 752px;
+
+  z-index: -5;
+  background-color: #5070de;
+  left:0;
+  @media (min-width: $bp-mobile) {
+    width: 95%;
+    left: 2%;
+    border: 1px solid #5171e0;
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 96%;
+    left: 2%;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 55%;
+    left: 0%;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 880px;
+
+  }
+
+}
+
+.rectangleright {
+  position: absolute;
+  width: 800px;
+  height: 752px;
+
+
+  mix-blend-mode: normal;
+  z-index: -5;
+  background-color: #5070de;
+  right:0;
+  @media (min-width: $bp-mobile) {
+    display: none;
+
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 100%;
+    display: none;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 45%;
+    right: 7%;
+    display: block;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 45%;
+    right: 13%;
+    display: block;
+
+
+  }
+}
+
+
+
+.ask {
+  position: relative;
+  top: 4550px;
+  @media (min-width: $bp-mobile) {
+    top: 4200px;
+  }
+
+  @media (min-width: $bp-tablet) {
+    top: 4000px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    top: 4550px;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    top: 4550px;
+
+  }
+
+}
+
+.rectangleleftask {
+  position: absolute;
+  width: 903px;
+  height: 752px;
+
+  z-index: -10;
+  background: url("../../img/bg.png");
+  left:0;
+  @media (min-width: $bp-mobile) {
+    width: 95%;
+    left: 2%;
+    border: 1px solid #5171e0;
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 96%;
+    left: 2%;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 55%;
+    left: 0%;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 880px;
+
+  }
+
+}
+
+.rectanglerightask {
+  position: absolute;
+  width: 809px;
+  height: 752px;
+
+
+  mix-blend-mode: normal;
+  z-index: -10;
+  background-color: #5070de;
+  right:0;
+  @media (min-width: $bp-mobile) {
+    display: none;
+
+  }
+
+  @media (min-width: $bp-tablet) {
+
+    display: none;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 45%;
+    right: 5%;
+    display: block;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 45%;
+    right: 11%;
+    display: block;
+
+
+  }
+}

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import '/src/styles/variables.scss';
+
+.selectionSection {
+  margin-left: 40px;
+  margin-right: auto;
+  padding: 0px;
+  box-sizing: border-box;
+
+  width: 100%;
+  @each $breakpoint, $container-width in $container-widths {
+    @if $breakpoint == 'large-desktop' {
+      @media screen and (min-width: $bp-large-desktop) {
+        max-width: $container-width;
+      }
+    }
+    @else if $breakpoint == 'desktop' {
+      @media screen and (min-width: $bp-desktop) and (max-width: $bp-large-desktop - 1px) {
+        max-width: $container-width;
+      }
+    }
+    @else if $breakpoint == 'tablet' {
+      @media screen and (min-width: $bp-tablet) and (max-width: $bp-desktop - 1px) {
+        max-width: $container-width;
+      }
+    }
+    @else if $breakpoint == 'mobile' {
+      @media screen and (max-width: $bp-tablet - 1px) {
+        max-width: $container-width;
+      }
+    }
+  }
+}
+
+.sectionHeader {
+  font-weight: 500;
+  margin: 20px;
+  @media (max-width: $bp-tablet - 1px) {
+    font-size: 32px;
+  }
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+    font-size: 40px;
+  }
+  @media (min-width: $bp-large-desktop) {
+    font-size: 48px;
+  }
+
+}
+
+.contentContainer {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  @media (max-width: $bp-tablet - 1px) {
+flex-direction: column;
+  }
+
+}
+
+.imageContainer {
+  flex: 0 0 auto;
+
+  position: relative;
+  overflow: hidden;
+  @media (max-width: $bp-tablet - 1px) {
+    width: 100%;
+    height: 300px;
+  }
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+    width: 300px;
+    height: auto;
+
+  }
+  @media (min-width: $bp-large-desktop) {
+    width: 784px;
+    height: 480px;
+  }
+
+}
+
+.imageBackground{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+
+}
+
+
+.accordionGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #eee;
+}
+
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  gap: 10px;
+  font-weight: 500;
+  color: #181A2A;
+  transition: background-color 0.2s ease;
+  @media (max-width: $bp-tablet - 1px) {
+    font-size: 20px;
+  }
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+    font-size: 24px;
+  }
+  @media (min-width: $bp-large-desktop) {
+    font-size: 32px;
+  }
+
+
+  &:hover {
+    background-color: #f7f7f7;
+  }
+}
+
+.accordionIcon {
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.accordionContent {
+  padding: 10px 15px;
+  color: #585A6A;
+  @media (max-width: $bp-tablet - 1px) {
+    font-size: 12px;
+  }
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+    font-size: 13px;
+  }
+  @media (min-width: $bp-large-desktop) {
+    font-size: 14px;
+  }
+
+  border-top: 1px solid #eee;
+}
+
+.active {
+  border-bottom: none;
+}
+
+.active > .accordionHeader {
+  background-color: #f7f7f7;
+}

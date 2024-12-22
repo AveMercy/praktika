@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import '/src/styles/variables.scss';
+
+*{
+  font-family: "Inter";
+}
+
+body{
+  margin: 0;
+  overflow-x: hidden;
+}
+.addressSearchContainer {
+  font-family: 'Inter', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: map-get($gutters, 'large-desktop');
+  padding-right: map-get($gutters, 'large-desktop');
+  @media (max-width: $bp-tablet - 1px) {
+    max-width: 100%;
+    padding-top: 5px;
+    padding-left: map-get($gutters, 'mobile');
+    padding-right: map-get($gutters, 'mobile');
+  }
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px) {
+    padding-left: map-get($gutters, 'tablet');
+    padding-right: map-get($gutters, 'tablet');
+  }
+}
+
+.location{
+  display: flex;
+  align-items: center;
+}
+
+.locationshare{
+  margin-top: 20px;
+}
+
+.city{
+  font-weight: 500;
+  padding: 0px 10px;
+  color: #333;
+  text-decoration: underline;
+  @media (max-width: $bp-tablet - 1px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+}
+
+.locationlogo {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  @media (max-width: $bp-tablet - 1px) {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+.addressSearch {
+  position: relative;
+  margin-top: 100px;
+  max-width: 1700px;
+  height: auto;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #000000;
+  @media (max-width: $bp-tablet - 1px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+    font-size: 48px;
+    line-height: 56px;
+  }
+  @media (min-width: $bp-large-desktop) {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+}
+
+.addressForm {
+  display: grid;
+  gap: 15px;
+}
+
+.searchButton {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  @media (max-width: $bp-tablet - 1px) {
+    font-size: 18px;
+    padding: 8px 12px;
+    width: 100%;
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-left: 5px;
+      right: 8px;
+    }
+  }
+
+
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+    font-size: 20px;
+    padding: 10px 15px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 7px;
+      right: 10px;
+    }
+  }
+  @media (min-width: $bp-large-desktop) {
+    font-size: 24px;
+    padding: 12px 24px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+      right: 12px;
+    }
+  }
+
+
+  &:hover {
+    background: #0056b3;
+  }
+}
+.consent {
+  margin-left: 72%;
+  font-size: 12px;
+  color: #777;
+  text-align: left;
+  white-space: normal;
+
+  @media (min-width: $bp-mobile) {
+    margin-left: 0%;
+    margin-top: -50px;
+  }
+
+  @media (min-width: $bp-tablet) {
+    margin-left: 65%;
+    margin-top: -40;
+  }
+
+  @media (min-width: $bp-desktop) {
+    margin-left: 72%;
+    margin-top: -40;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    margin-left: 72%;
+    margin-top: 0;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  border-top: 1px solid #106ef1;
+  border-bottom: 1px solid #106ef1;
+  border-left: 1px solid #106ef1;
+  border-radius: 15px 0 0 15px;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  margin: 50px 0px;
+  max-width: 1200px;
+  @media (min-width: $bp-mobile) {
+    margin: 50px 0px;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 15px;
+
+  }
+
+  @media (min-width: $bp-tablet) {
+    width:80%;
+    height: 60px;
+    flex-direction: row;
+    border-radius: 15px 0 0 15px;
+
+  }
+
+  @media (min-width: $bp-desktop) {
+    width:90%;
+    height: 80px;
+    border-radius: 15px 0 0 15px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width:100%;
+    height: 100px;
+    flex-direction: row;
+    border-radius: 15px 0 0 15px;
+  }
+}
+.inputRow{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 0 0px 0 10px;
+  max-width: 1000px;
+  @media (max-width: $bp-tablet - 1px) {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  @media (min-width: $bp-mobile) {
+    flex-direction: column;
+    width:100%;
+    gap: 5px;
+  }
+
+  @media (min-width: $bp-tablet) {
+    width:20%;
+    gap: 10px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width:20%;
+    gap: 20px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width:100%;
+    flex-direction: row;
+  }
+
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  border-right: 1px solid #106cea;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin: 0px 15px;
+  @media (max-width: $bp-tablet - 1px) {
+    border-right: none;
+    border-bottom: 1px solid #106cea;
+    padding: 10px;
+    margin: 0px;
+
+  }
+
+
+}
+.inputRow > .inputContainer:last-child {
+  border-right: none;
+  @media (max-width: $bp-tablet - 1px) {
+    border-bottom: none;
+
+  }
+
+}
+
+.inputContainerLeft {
+  border-radius: 4px 0 0 4px;
+}
+
+input, select {
+  border: none;
+  outline: none;
+  font-weight: normal;
+  color: #020a19;
+  background-color: transparent;
+  @media (max-width: $bp-tablet - 1px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+    font-size: 20px;
+  }
+  @media (min-width: $bp-large-desktop) {
+    font-size: 24px;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 12l-6-6h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 5px);
+  background-size: 10px;
+  background-color: transparent;
+  position: relative;
+}
+select::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+select option{
+  font-size: 16px;
+  font-weight: normal;
+  color: #000000;
+}
+select::-ms-expand {
+  display: none;
+}
+label {
+  font-size: 12px;
+  font-weight: normal;
+  color: #0d48b5;
+}
+
+.selectContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.selectContainer select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 12l-6-6h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 5px);
+  background-size: 10px;
+  background-color: transparent;
+  position: relative;
+}
+
+.selectContainer select::-ms-expand {
+  display: none;
+}
+
+.selectContainer::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #106ef1;
+  background-color: white;
+  border-radius: 4px;
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.selectContainer:focus-within::after {
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.buttonProvider {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #69abed, #3688c7);
+  text-decoration: none;
+  border-radius: 0 15px 15px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  white-space: nowrap;
+  height: 100%;
+  flex-shrink: 0;
+  max-width: 400px;
+
+  @media (max-width: $bp-tablet - 1px) {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 15px;
+  }
+  @media (min-width: $bp-mobile) {
+    width: 100%;
+    height: 40px;
+    left: 0;
+    border-radius: 15px;
+
+  }
+
+  @media (min-width: $bp-tablet) {
+    width: 165%;
+    height: 60px;
+    left: 5%;
+    border-radius: 0 15px 15px 0;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 165%;
+    height: 80px;
+    left: 5%;
+    border-radius: 0 15px 15px 0;
+  }
+
+  @media (min-width: $bp-large-desktop) {
+    width: 100%;
+    height: 100px;
+    left: 0;
+    border-radius: 0 15px 15px 0;
+  }
+
+
+  &:hover {
+    background: linear-gradient(to top, #3688c7, #25a2a6);
+  }
+
+  .arrowIcon {
+    transition: transform 0.3s ease;
+    stroke: white;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &:hover .arrowIcon {
+    transform: translateX(5px);
+  }
+}
+.cityDropdown {
+  position: relative;
+  display: inline-block;
+  .cityDropdownHeader {
+    font-weight: 500;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @media (max-width: $bp-tablet - 1px) {
+      font-size: 12px;
+    }
+    @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+      font-size: 16px;
+    }
+    @media (min-width: $bp-large-desktop) {
+      font-size: 24px;
+    }
+  }
+  .cityDropdownList{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #E5E8F1;
+    z-index: 10;
+    border-radius: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    .cityDropdownItem{
+      font-weight: 400;
+      color: #585A6A;
+      cursor: pointer;
+      padding: 10px 15px;
+
+      @media (max-width: $bp-tablet - 1px) {
+        font-size: 16px;
+      }
+      @media (min-width: $bp-tablet) and (max-width: $bp-large-desktop - 1px){
+        font-size: 18px;
+      }
+      @media (min-width: $bp-large-desktop) {
+        font-size: 20px;
+      }
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+    }
+  }
+}
